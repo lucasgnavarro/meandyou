@@ -1,0 +1,76 @@
+<div id="stories-root-container">
+  
+    <!-- menu-container -->
+    <div class="menu-container" ng-if="data.storyIndex == 0">
+        <ul>
+            <li ng-click="bl.close();"><i class="fas fa-times fa-2x"></i></li>
+            <li id="menu-header" >{{'stories' | translate}}</li>
+            <li ng-click="bl.viewStory(1)">{{'stories_1_vicky' | translate}}</li>
+            <li ng-click="bl.viewStory(2)">{{'stories_2_sarah' | translate}}</li>
+            <li ng-click="bl.viewStory(3)">{{'stories_3_annyphilip' | translate}}</li>
+            <li ng-click="bl.viewStory(4)">{{'stories_4_thomas' | translate}}</li>
+            <li ng-click="bl.viewStory(5)">{{'stories_5_lucy' | translate}}</li>
+            <li ng-click="bl.viewStory(6)">{{'stories_6_valentineday' | translate}}</li>
+            <li ng-click="bl.viewStory(7)">{{'stories_7_mery' | translate}}</li>
+            <li ng-click="bl.viewStory(8)">{{'stories_8_profesorbrown' | translate}}</li>
+            <li ng-click="bl.viewStory(9)">{{'stories_9_emilyandrose' | translate}}</li>
+        </ul>
+    </div>
+    <!-- end menu-container-->
+
+    <!-- Content container -->
+    <div class="content-container" ng-if="data.storyIndex != 0">
+
+        <div class="title">
+            <div ng-if="data.storyIndex == 1"><strong>#{{data.storyIndex}}</strong> {{'stories_1_vicky' | translate}}</div>
+            <div ng-if="data.storyIndex == 2"><strong>#{{data.storyIndex}}</strong> {{'stories_2_sarah' | translate}}</div>
+            <div ng-if="data.storyIndex == 3"><strong>#{{data.storyIndex}}</strong> {{'stories_3_annyphilip' | translate}}</div>
+            <div ng-if="data.storyIndex == 4"><strong>#{{data.storyIndex}}</strong> {{'stories_4_thomas' | translate}}</div>
+            <div ng-if="data.storyIndex == 5"><strong>#{{data.storyIndex}}</strong> {{'stories_5_lucy' | translate}}</div>
+            <div ng-if="data.storyIndex == 6"><strong>#{{data.storyIndex}}</strong> {{'stories_6_valentineday' | translate}}</div>
+            <div ng-if="data.storyIndex == 7"><strong>#{{data.storyIndex}}</strong> {{'stories_7_mery' | translate}}</div>
+            <div ng-if="data.storyIndex == 8"><strong>#{{data.storyIndex}}</strong> {{'stories_8_profesorbrown' | translate}}</div>
+            <div ng-if="data.storyIndex == 9"><strong>#{{data.storyIndex}}</strong> {{'stories_9_emilyandrose' | translate}}</div>
+        </div>
+        
+
+        <div class="column-container">
+            <div class="col-1">
+                <span ng-if="data.storyIndex == 1">{{'stories_1_vicky-part1' | translate}}</span>
+                <span ng-if="data.storyIndex == 2">{{'stories_2_sarah-part1' | translate}}</span>
+                <span ng-if="data.storyIndex == 3">{{'stories_3_annyphilip-part1' | translate}}</span>
+                <span ng-if="data.storyIndex == 4">{{'stories_4_thomas-part1' | translate}}</span>
+                <span ng-if="data.storyIndex == 5">{{'stories_5_lucy-part1' | translate}}</span>
+                <span ng-if="data.storyIndex == 6">{{'stories_6_valentineday' | translate}}</span>
+                <span ng-if="data.storyIndex == 7">{{'stories_7_mery-part1' | translate}}</span>
+                <span ng-if="data.storyIndex == 8">{{'stories_8_profesorbrown-part1' | translate}}</span>
+                <span ng-if="data.storyIndex == 9">{{'stories_9_emilyandrose-part1' | translate}}</span>
+            </div>
+            
+            <div class="col-2">
+                <span ng-if="data.storyIndex == 1">{{'stories_1_vicky-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 2">{{'stories_2_sarah-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 3">{{'stories_3_annyphilip-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 4">{{'stories_4_thomas-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 5">{{'stories_5_lucy-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 6">{{'stories_6_valentineday-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 7">{{'stories_7_mery-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 8">{{'stories_8_profesorbrown-part2' | translate}}</span>
+                <span ng-if="data.storyIndex == 9">{{'stories_9_emilyandrose-part2' | translate}}</span>
+            </div>
+        </div>
+
+
+        <div class="stories-footer">
+
+            <div class="btn-back" ng-click="bl.goBack()">
+                {{'back' | translate}} <i class="fas fa-arrow-circle-left"></i>
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- End Content Container -->
+
+
+</div>

@@ -1,0 +1,35 @@
+<div class="stack" id="stack-container" ng-init="ui.setStackDropListener()" ng-class="{'fixed': !settings.autoScaling}">
+
+    <ul class="hide">
+        <li>
+            <span style="color:#fff; font-weight: strong"> In Board {{bl.getCardsInBoardCount()}}</span>
+        </li>
+
+        <li>
+            <span style="color:#fff; font-weight: strong"> Selected {{bl.getCardsSelectedCount()}}</span>
+        </li>
+
+        <li>
+            <span style="color:#fff; font-weight: strong"> SCALE {{bl.scaleCalculator()}}</span>
+        </li>
+    
+
+    </ul>
+
+    <img id="stack-img" src="/images/backside.png" alt="" ng-click="ui.listeners.stackClick()">
+
+    <div class="btn-keep" ng-class="{'hide': bl.getCardsSelectedCount() == 0}">
+        <button ng-click="bl.keepSelectedCards()" >
+            {{'keep' | translate}} {{bl.getCardsSelectedCount()}}
+            <span ng-class="{'hide': bl.getCardsSelectedCount() > 1}">{{'selected_card' | translate}}</span>
+            <span ng-class="{'hide': bl.getCardsSelectedCount() == 1}">{{'selected_cards' | translate}}</span>
+        </button>
+        
+    </div>
+
+    <div class="btn-clear-selected" ng-class="{'hide': bl.getCardsSelectedCount() == 0}">
+            <button ng-click="bl.clearSelectedCards()"><i class="fa fa-times"></i></button>
+            
+        </div>
+</div>
+

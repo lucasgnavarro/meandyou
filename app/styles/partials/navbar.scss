@@ -1,0 +1,317 @@
+.game-nav{
+
+    /* @media  (max-width:1024px) {
+        display: none;
+    } */
+
+    height: 70px;
+    width: 100%;
+    background-color: #171717;
+    border-bottom: 1px solid #213B3B;
+    z-index: 1001;
+
+    &.fixed{
+        position:fixed;
+    }
+
+    > ul{
+        padding-top: 0px;
+        margin-top: 0px;
+        list-style-type: none;
+        background-color: transparent;
+        height: 100%;
+
+        > li{
+            display: inline;
+            vertical-align: middle;
+
+            button{
+                font-family: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+                color: rgb(255, 255, 255);
+                border:2px solid #27b1b7;
+                margin-top:15px;
+                outline-color: transparent;
+                background-color: transparent;
+                height: 48px;
+
+
+                &:hover{
+                    cursor: pointer;
+                    border:2px solid #1c8085;
+                }
+            }
+        }
+    }
+}
+
+.game-nav > ul > li button.secondary{
+    color: #27b1b7;
+    border-radius: 3px;
+
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    min-width: 230px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    border-radius: 5px;
+    margin-top:10px;
+    position: absolute;
+    background-color: #27b1b7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    /* Links inside the dropdown */
+    li{
+        color: rgb(255, 255, 255);
+        font-family: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+        padding: 12px 5px;
+        text-decoration: none;
+        display: block;
+        
+    }    
+
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+#filter-card-dropdown{
+    width: 290px;
+    li{
+        // border:2px solid green;
+        display: flex;
+        justify-content: space-between;
+        margin-left:10px;
+        margin-right:10px;
+        border-bottom: 1px solid #258789!important;
+
+        span{
+            float: left;
+            padding-top:10px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .switch{
+            float: right;
+        }
+    }
+}
+
+#show-category-dropdown{
+    width: 230px;  
+    li{
+        padding:5px 5px;
+
+        &:first-of-type {
+            padding-top:20px;
+        }
+
+        &:last-of-type {
+            padding-bottom:20px;
+        }
+    }
+
+    .btn-show-category{
+        color: #FFF;
+        border:2px solid #fff;
+        border-radius: 25px;
+        background: transparent;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+
+        display:block;
+        margin: 0 auto;
+
+        width: 200px;
+        height: 49px;
+        
+    }
+
+    .btn-show-all-cards{
+        @extend .btn-show-category;
+        border-radius: 1px;
+        text-transform: uppercase;
+    }
+
+}
+
+#btn-how-to-use{
+    margin-left: 10px;
+
+    button{
+        width: 48px;
+        background-color: transparent;
+        font-size: 25px;
+        font-weight: 600;
+        //padding: 8px 10px;
+        
+        &:hover{
+            color:#FFF;
+        }
+    }
+}
+
+
+#btn-stories{
+    //width: 75px;
+    float: right;
+    margin-right: 15px;
+    button{
+        font-size: 18px;
+        font-weight: 400;
+        border-radius: 25px;
+        min-width: 100px;
+        
+    }
+    
+}
+
+#btn-undo{
+    float: right;
+    margin-right: 20px;
+    
+    button{
+        border-radius: 25px;
+        width: 70px;
+       
+    } 
+}
+
+#btn-grid{
+    float:right;
+    margin-right: 5px;
+    
+    button{
+        width: 50px;
+        border-radius: 25px 5px 5px 25px;
+        padding-left:10px; 
+            
+        &.active{
+            background-color: #258789;
+        }
+
+    }
+}
+
+#btn-scale{
+    float:right;
+    margin-right: 15px;
+
+
+    button{
+        width: 50px;
+        border-radius: 5px 25px 25px 5px;
+        
+    }
+}
+
+#btn-fullscreen{
+    float:right;
+    margin-right: 10px;
+
+    button{
+        width: 48px;
+        background-color: transparent;
+        font-size: 1.3em;
+        font-weight: 600;
+        //padding: 8px 13px;
+
+        &:hover{
+            color:#FFF;
+        }
+    }
+}
+
+#btn-restart{
+    float: right;
+    margin-right: 120px;
+
+    @media  (max-width:1024px) {
+        margin-right: 20px;
+    } 
+
+    button{
+        border-radius: 25px;
+        width: 70px;
+    } 
+}
+
+#dropdown-show{
+    float:right;
+    margin-right: 10px;
+}
+
+#dropdown-filter{
+    float:right;
+    margin-right: 10px;    
+}
+
+
+#scale-dropdown{
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    margin-left:-15px;
+    
+    li{
+        padding:5px 10px;
+        text-align: center;
+
+        &:first-of-type {
+            padding-top:15px;
+        }
+
+        &:last-of-type {
+            padding-bottom:15px;
+        }
+
+        i{
+            display: block;
+            margin:0 auto;
+        }
+    }
+    
+    input[type=range][orient=vertical]
+    {
+        direction: rtl;
+        writing-mode: bt-lr; /* IE */
+        -webkit-appearance: slider-vertical; /* WebKit */
+        width: 8px;
+        height: 175px;
+        padding: 0 5px;
+        display: block;
+        margin: 0 auto;
+
+        //ROTATE
+        -webkit-transform:rotate(180deg); 
+        -moz-transform:rotate(180deg); 
+        -o-transform:rotate(180deg); 
+        -ms-transform:rotate(180deg); 
+        transform:rotate(180deg); 
+    }
+}
+

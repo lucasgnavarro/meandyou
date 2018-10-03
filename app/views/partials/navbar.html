@@ -1,0 +1,147 @@
+<nav class="game-nav" ng-class="{'fixed': !settings.autoScaling}">
+    <ul>
+        <!-- btn-how-to-use -->
+        <li id="btn-how-to-use"> 
+            <button 
+                data-balloon="{{'how_to_use_them' | translate}}" data-balloon-pos="right"
+                class=" secondary"
+                ng-click="ui.listeners.howToUse()"
+            >
+                <i class="fas fa-question"></i>
+            </button>
+        </li>
+
+        <!--Right Side-->
+        <li id="btn-fullscreen">
+            <button class="secondary" ng-click="ui.openFullscreen()" 
+                ng-class="{'hide': settings.fullscreen }" 
+                data-balloon="{{'toggle_fullscreen' | translate}}" data-balloon-pos="left"
+            >
+                <i class="fas fa-expand"></i>
+            </button>
+
+            <button class="secondary" ng-click="ui.closeFullscreen()" 
+                ng-class="{'hide': !settings.fullscreen }" 
+                data-balloon="{{'toggle_fullscreen' | translate}}" data-balloon-pos="left"
+            >
+                <i class="fas fa-compress"></i>
+            </button>
+
+        </li>
+
+
+        <li id="btn-restart" ng-click="bl.resetBoard()" 
+            data-balloon="{{'restart_game' | translate}}" data-balloon-pos="down"
+        >
+            <button> <i class="fas fa-sync-alt fa-2x"></i> </button>
+        </li>
+
+        <li id="btn-scale" >
+            <div class="dropdown">
+                <button 
+                    ng-click="ui.listeners.scaleDropdown($event)" 
+                    data-balloon="{{'change_scale' | translate}}" data-balloon-pos="down"
+                >
+                    <i class="fab fa-searchengin fa-2x"></i>
+                </button>
+
+                <ul id="scale-dropdown" class="dropdown-content">
+                    <li role="menuitem" ng-click="bl.scaleDown()" style="cursor: pointer;" ><i class="fas fa-plus-circle"></i></li>
+
+                    <li role="menuitem">
+                        <input type="range" orient="vertical" ng-model="settings.scale" min="1" max="15"/>
+                    </li>
+
+                    <li role="menuitem" ng-click="bl.scaleUp()" style="cursor: pointer;"><i class="fas fa-minus-circle"></i></li>
+                </ul>
+            </div>
+            <!-- <button><i class="fab fa-searchengin fa-2x"></i></button> -->
+        </li>
+
+        <li id="btn-grid">
+            <button ng-click="bl.toggleAutoScaling()" ng-class="{'active': settings.autoScaling}"
+                data-balloon="{{'toggle_autoscaling' | translate}}" data-balloon-pos="down"
+            >
+                <i class="fas fa-grip-horizontal fa-2x"></i>
+            </button>
+        </li>
+
+        <li id="btn-stories" ng-click="ui.listeners.btnShowStories()">
+            <button>{{'stories' | translate}}</button>
+        </li>
+
+
+        <!-- SHOW CATEGORY DROPDOWN -->
+        <li id="dropdown-show" >
+            <div class="dropdown">
+                <button ng-click="ui.listeners.showCategoryDropdown($event)" class="dropbtn">
+                    <span>{{'show_a_category' | translate}}</span>
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                
+                <ul id="show-category-dropdown" class="dropdown-content">
+                    <li role="menuitem" ng-repeat="category in data.categories">
+                        <button class="btn-show-category" ng-click="bl.setCardsInBoardByCategory(category)">{{category}}</button>
+                    </li>
+                    <li role="menuitem">
+                        <button class="btn-show-all-cards" ng-click="bl.setAllCardsInBoard()" >{{'show_all_cards' | translate}}</button>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+
+        <!-- FILTER CATEGORY DROPDOWN -->
+        <li id="dropdown-filter">
+            <div class="dropdown">
+                <button ng-click="ui.listeners.filterCardDropdown($event)" class="dropbtn">
+                    <span>{{'filter_cards' | translate}}</span>
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+
+                <ul id="filter-card-dropdown" class="dropdown-content">
+                    <li role="menuitem" ng-repeat="category in data.categories">
+                        <span>{{category}}</span>
+                        <div class="switch">
+                            <input id="cmn-toggle-{{$index}}" class="cmn-toggle cmn-toggle-round-flat" type="checkbox"
+                                ng-checked="bl.categoryIsFiltered(category)"
+                                ng-click="bl.categoryFilteredToggle(category)"
+                            >
+
+                            <label for="cmn-toggle-{{$index}}"></label>
+                        </div>
+                        
+        
+                    </li>
+                </ul>
+            </div>
+            
+        </li>
+            
+
+        <li id="btn-undo" ng-class="{'hide': bl.getSavedStatesCount() === 0}" >
+            <button ng-click="bl.restoreState()" 
+                data-balloon="{{'undo' | translate:{ states: bl.getSavedStatesCount() } }}" data-balloon-pos="down"
+            > 
+                <i class="fas fa-history fa-2x"></i>
+            </button>
+        </li>
+    
+    
+        
+    </ul>
+</nav>
+
+
+<!-- 
+
+    <div class="switch">
+        <input id="cmn-toggle-{{$index}}" class="cmn-toggle cmn-toggle-round-flat" type="checkbox"
+            ng-checked="bl.categoryIsFiltered(category)"
+            ng-click="bl.categoryFilteredToggle(category)"
+        >
+
+        <label for="cmn-toggle-{{$index}}"></label>
+    </div>
+ -->
+

@@ -1,0 +1,24 @@
+<div id="preload-overlay">
+
+    <!-- <h1 ng-class="{'hide': bl.gameIsLoaded()}">TEST</h1>
+ -->
+
+    <div id="button-start-container">
+        <button ng-click="ui.listeners.startGame()" ng-class="{'all-ok': bl.gameIsLoaded()}">{{'start' | translate}}</button>
+    </div>
+
+
+    <span class="loader-counter" ng-class="{'hide': bl.gameIsLoaded()}">
+        Loading {{data.loader.count}}/{{data.loader.total}}
+        <br>
+        <progress max="79" value="{{data.loader.count}}"></progress>
+    </span>
+
+    <span style="position:fixed; bottom:10px; left:10px; font-weight:700; color:#FFF;">
+        
+        
+    </span>
+
+
+    
+</div>

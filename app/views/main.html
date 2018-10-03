@@ -1,0 +1,29 @@
+<div>
+
+    <div class="game-board">
+        <audio id="audio-click-card" preload="auto" src="/files/click_card.ogg" muted="muted"></audio>
+        <audio id="audio-drop-card" preload="auto" src="/files/drop_card.ogg" muted="muted"></audio>
+        <audio id="audio-game-ready" preload="auto" src="/files/suit_ready.ogg" muted="muted"></audio>
+
+        <ng-include src="'views/partials/preload.html'" ></ng-include>
+
+
+        <ng-include src="'views/partials/navbar.html'" ></ng-include>
+
+        <div class="board-container">
+
+            <!-- stack -->
+            <ng-include src="'views/partials/stack.html'">
+            </ng-include>
+
+            <!-- board     -->
+            <ng-include src="'views/partials/board.html'" >
+            </ng-include>
+
+        </div>
+
+        <div id="viewer-container" class="hide"></div>
+
+    </div>
+
+</div>

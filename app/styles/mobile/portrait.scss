@@ -1,0 +1,36 @@
+
+
+.mobile-portrait{
+    text-align: center;
+    color:#fff;
+    display: none;
+    height: 100vmin;
+  
+    i{
+      margin-top:200px;
+      -webkit-animation:m-spin 1s linear infinite;
+      -moz-animation:m-spin s linear infinite;
+      animation:m-spin 1s linear infinite;
+    }
+  
+    .label{
+      position: fixed;
+      bottom:0px;
+      left:0px;
+      width: 100%;
+      background-color: #26B1B6;
+      padding:25px 0px 25px 0px;
+      font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 800;
+    }
+  
+    @media  (max-width:1024px) and (orientation:portrait){
+      display: block;
+    }
+  
+  }
+  
+  @-moz-keyframes m-spin { 100% { -moz-transform: rotate(90deg); } }
+  @-webkit-keyframes m-spin { 100% { -webkit-transform: rotate(90deg); } }
+  @keyframes m-spin { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); } }
+  

@@ -1,0 +1,79 @@
+@import 'partials/reset';
+
+@import 'partials/navbar';
+
+@import 'partials/toggle_switch';
+
+@import 'partials/stack';
+
+@import 'partials/card';
+
+@import 'partials/board';
+
+@import 'partials/preload';
+
+@import 'partials/stories';
+
+@import 'mobile/mobile';
+
+
+body{
+  background: #171717;
+    &.not-game{
+      background: #FFF !important;
+    }// overflow: hidden;
+}
+
+.hide{
+    display:none !important;
+}
+
+/* .game-board{
+  @media  (max-width:1024px) and (orientation:portrait){
+    display: none;
+  }
+   
+}*/
+
+//TOOLTIP 
+[data-balloon][data-balloon-pos='right']:after{
+  background-color: #1c8085;
+  font-weight: 800!important;
+}
+
+[data-balloon][data-balloon-pos='down']:hover:after, [data-balloon][data-balloon-pos='down'][data-balloon-visible]:after{
+  background-color: #1c8085;
+  font-weight: 800!important;   
+}
+
+[data-balloon][data-balloon-pos='left']:after{
+  background-color: #1c8085;
+  font-weight: 800!important;    
+}
+
+
+//FULL IMAGE VIEWER
+.viewer-canvas>img{
+    border-radius: 8px !important;
+}
+
+.viewer-close{
+  background-color: rgb(39,177,183)!important;
+      
+  /*@media (max-width: $screen-md-max) {
+      background-color: 
+  }*/
+
+  }
+
+.viewer-backdrop {
+  background-color: #180a28;//rgba(28,128,133,0.8) !important;
+}
+
+.viewer-next{
+  background-color: #27b1b7 !important;
+}
+
+.viewer-prev{
+  background-color: #27b1b7 !important;
+}

@@ -1,0 +1,25 @@
+@import 'portrait';
+
+.mobile-game-board{
+  @media  (max-width:1024px) and (orientation:portrait){
+    display: none;
+  }
+
+  display: block;
+  position: absolute;
+  height: 99%;
+  width: 99%;
+  overflow: hidden;
+  
+  //border: 1px solid red;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+
+  span{
+    display: block;
+    margin-top:55px;
+    color: #FFF;
+    font-weight: 800;
+    font-size: 38px;
+  }
+}

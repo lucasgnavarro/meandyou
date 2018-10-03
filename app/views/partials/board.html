@@ -1,0 +1,7 @@
+<div class="board" ng-class="[bl.getGridClass(), {'fixed': !settings.autoScaling}]">
+        
+    <div ng-repeat="card in data.cardsInBoard">
+        <card definition="card"/>
+    </div>
+
+</div>
