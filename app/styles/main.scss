@@ -55,6 +55,11 @@ body{
 //FULL IMAGE VIEWER
 .viewer-canvas>img{
     border-radius: 8px !important;
+    background: #fff;
+}
+
+.viewer-list>li{
+  background: #fff;
 }
 
 .viewer-close{
